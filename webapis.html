@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tecnologías de Web APIs</title>
+  <link rel="stylesheet" href="estilos.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css">
+</head>
+<body>
+
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+  <div class="container-fluid">
+    <a class="navbar-brand" href="index.html">Web Informativa</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#menu">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="menu">
+      <ul class="navbar-nav ms-auto">
+        <li class="nav-item"><a class="nav-link" href="webapis.html">Web APIs</a></li>
+        <li class="nav-item"><a class="nav-link" href="microservicios.html">Microservicios</a></li>
+        <li class="nav-item"><a class="nav-link" href="webapi-desarrollo.html">Desarrollo de API</a></li>
+        <li class="nav-item"><a class="nav-link" href="contenedores-nube.html">Contenedores y Nube</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<header class="bg-primary text-white p-5 text-center">
+  <h1>Tecnologías de Web APIs</h1>
+  <p>HTTP, SOAP, REST, JWT y su impacto en el desarrollo moderno</p>
+</header>
+
+<main class="container my-5">
+
+  <section>
+    <h2>1. HTTP (Protocolo de Transferencia de Hipertexto)</h2>
+    <div class="row align-items-center">
+      <div class="col-md-6">
+        <p>
+          HTTP es el protocolo base de la comunicación en la web. Funciona como el lenguaje que permite a los navegadores solicitar y recibir información de los servidores. En el contexto de las APIs, HTTP proporciona los métodos esenciales como GET, POST, PUT y DELETE, que permiten manipular recursos en línea. Las APIs que utilizan HTTP son llamadas "RESTful APIs", ya que se ajustan a un conjunto de restricciones que las hacen eficientes y escalables.
+          <br><br>
+          Su simplicidad, compatibilidad y uso generalizado hacen de HTTP una de las herramientas más utilizadas para integrar servicios. Hoy en día, casi todas las Web APIs modernas se basan en este protocolo.
+        </p>
+      </div>
+      <div class="col-md-6">
+        <img src="img/LOGO HTTP.png" class="img-fluid rounded" alt="Logo HTTP">
+      </div>
+    </div>
+  </section>
+
+  <section class="mt-5">
+    <h2>2. SOAP (Protocolo Simple de Acceso a Objetos)</h2>
+    <p>
+      SOAP es un protocolo de mensajería basado en XML que permite la comunicación entre aplicaciones a través de la red. A diferencia de REST, SOAP es más estricto y requiere un mayor nivel de configuración, pero también ofrece características como seguridad, transacciones y mensajes bien definidos. Esto lo hace ideal para entornos empresariales o servicios que requieren validación, estructura rígida o soporte para operaciones complejas.
+      <br><br>
+      Un mensaje SOAP contiene un "sobre" (envelope) que define lo que se está transmitiendo y cómo debe procesarse. Aunque hoy en día muchas organizaciones prefieren REST por su simplicidad, SOAP aún tiene su lugar en sistemas financieros, gubernamentales y empresariales críticos.
+    </p>
+    <img src="img/SOAP.png" class="img-fluid d-block mx-auto" style="max-height:200px;" alt="SOAP">
+  </section>
+
+  <section class="mt-5">
+    <h2>3. REST (Transferencia de Estado Representacional)</h2>
+    <p>
+      REST no es un protocolo sino un estilo arquitectónico que se basa en el uso del protocolo HTTP. Las APIs RESTful utilizan recursos identificables por URLs, y cada recurso puede ser manipulado usando los métodos estándar (GET, POST, PUT, DELETE). Es liviano, fácil de mantener, escalable y compatible con cualquier lenguaje.
+      <br><br>
+      Su simplicidad ha llevado a que se convierta en el estándar de facto en la construcción de APIs modernas. REST promueve la separación cliente-servidor y permite un desarrollo ágil, flexible y fácilmente integrable con otras tecnologías como JSON, que reemplaza a XML en muchos casos.
+    </p>
+    <div class="text-center">
+      <iframe width="560" height="315" src="https://www.youtube.com/embed/lsMQRaeKNDk" title="¿Qué es REST?" frameborder="0" allowfullscreen></iframe>
+    </div>
+  </section>
+
+  <section class="mt-5">
+    <h2>4. JWT (JSON Web Token)</h2>
+    <p>
+      JWT es una tecnología que se usa para la autenticación y autorización en Web APIs. Funciona generando un token codificado en base64 que contiene la información del usuario y sus permisos. Este token se transmite entre el cliente y el servidor con cada solicitud, y el servidor lo valida para confirmar la identidad del usuario.
+      <br><br>
+      Los tokens JWT tienen tres partes: header, payload y signature. Son compactos, seguros (cuando se usan con HTTPS), y permiten autenticar usuarios sin necesidad de sesiones en el servidor. Son especialmente útiles en aplicaciones SPA (Single Page Application) y APIs RESTful.
+    </p>
+    <img src="img/JWT.png" class="img-fluid rounded mx-auto d-block" style="max-height:300px;" alt="JWT">
+  </section>
+
+  <section class="mt-5">
+    <h3>Contáctanos</h3>
+    <form class="row g-3">
+      <div class="col-md-6">
+        <label for="nombre" class="form-label">Nombre</label>
+        <input type="text" class="form-control" id="nombre">
+      </div>
+      <div class="col-md-6">
+        <label for="email" class="form-label">Correo Electrónico</label>
+        <input type="email" class="form-control" id="email">
+      </div>
+      <div class="col-12">
+        <label for="mensaje" class="form-label">Mensaje</label>
+        <textarea class="form-control" id="mensaje" rows="3"></textarea>
+      </div>
+      <div class="col-12">
+        <button type="submit" class="btn btn-primary">Enviar</button>
+      </div>
+    </form>
+  </section>
+
+</main>
+
+<div class="modal fade" id="infoModal" tabindex="-1" aria-labelledby="modalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="modalLabel">Información adicional</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Cerrar"></button>
+      </div>
+      <div class="modal-body">
+        Esta página fue desarrollada usando HTML, CSS, Bootstrap 5 y contiene información sobre tecnologías esenciales para el desarrollo de APIs web modernas.
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<footer class="bg-dark text-white text-center p-3 mt-5">
+  &copy; Jorge Cabrera Dueñas.
+</footer>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

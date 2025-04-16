@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Contenedores y Nube</title>
+  <link rel="stylesheet" href="estilos.css"/>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"/>
+</head>
+<body>
+
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+  <div class="container-fluid">
+    <a class="navbar-brand" href="index.html">Web Informativa</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#menu">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="menu">
+      <ul class="navbar-nav ms-auto">
+        <li class="nav-item"><a class="nav-link" href="webapis.html">Web APIs</a></li>
+        <li class="nav-item"><a class="nav-link" href="microservicios.html">Microservicios</a></li>
+        <li class="nav-item"><a class="nav-link" href="webapi-desarrollo.html">Desarrollo de API</a></li>
+        <li class="nav-item"><a class="nav-link active" href="contenedores-nube.html">Contenedores y Nube</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<header class="bg-secondary text-white text-center p-5">
+  <h1>Manejo de Contenedores y Desarrollo en la Nube</h1>
+  <p>Implementando soluciones modernas, portables y escalables</p>
+</header>
+
+<main class="container my-5">
+
+
+  <section>
+    <h2>1. Manejo de Contenedores</h2>
+    <p>
+      El manejo de contenedores ha revolucionado la forma en que desarrollamos, probamos y desplegamos software. Un contenedor es una unidad ligera, portátil y autónoma que empaqueta una aplicación junto con todas sus dependencias, bibliotecas y archivos de configuración. La tecnología más popular en este campo es <strong>Docker</strong>.
+      <br><br>
+      Los contenedores ofrecen consistencia entre entornos, eliminando el clásico "en mi máquina sí funciona". También reducen tiempos de despliegue, ya que se inician rápidamente y consumen menos recursos que una máquina virtual.
+    </p>
+    <div class="text-center my-4">
+      <img src="https://www.docker.com/wp-content/uploads/2022/03/Moby-logo.png" class="img-fluid" style="max-height:150px;" alt="Docker" />
+    </div>
+    <ul>
+      <li>✅ Portabilidad entre entornos de desarrollo, pruebas y producción.</li>
+      <li>✅ Reducción de conflictos por dependencias.</li>
+      <li>✅ Integración continua y despliegue continuo (CI/CD).</li>
+    </ul>
+    <p>
+      Además, los contenedores pueden ser orquestados por plataformas como <strong>Kubernetes</strong>, que permiten escalar automáticamente, monitorear el estado de los servicios y balancear carga. Esto es especialmente útil para sistemas basados en microservicios.
+    </p>
+    <img src="img/Kubernetes.png" class="img-fluid d-block mx-auto my-4" style="max-height:180px;" alt="Kubernetes">
+  </section>
+
+  <section class="mt-5">
+    <h2>2. Desarrollo para la Nube</h2>
+    <p>
+      Desarrollar para la nube implica construir aplicaciones que se ejecuten, escalen y mantengan eficientemente en plataformas como <strong>AWS, Azure o Google Cloud</strong>. El enfoque cloud-first ha cambiado la manera en que se diseñan las soluciones digitales, permitiendo elasticidad, disponibilidad global y optimización de recursos.
+    </p>
+    <div class="row my-4">
+      <div class="col-md-4">
+        <div class="card shadow-sm">
+          <img src="img/aws.png" class="card-img-top" alt="AWS" />
+          <div class="card-body">
+            <h5 class="card-title">Amazon Web Services</h5>
+            <p class="card-text">Líder en servicios en la nube, con productos como EC2, S3, Lambda, DynamoDB.</p>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="card shadow-sm">
+          <img src="https://upload.wikimedia.org/wikipedia/commons/a/a8/Microsoft_Azure_Logo.svg" class="card-img-top" alt="Azure" />
+          <div class="card-body">
+            <h5 class="card-title">Microsoft Azure</h5>
+            <p class="card-text">Plataforma integral para apps, bases de datos, análisis y aprendizaje automático.</p>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="card shadow-sm">
+          <img src="img/CLOUD.png" class="card-img-top" alt="GCP" />
+          <div class="card-body">
+            <h5 class="card-title">Google Cloud</h5>
+            <p class="card-text">Especializado en servicios para Big Data, ML y APIs de IA como Vertex AI.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <p>
+      Una aplicación cloud-native está diseñada para ser escalable, resiliente y tolerante a fallos. Se apoya en servicios gestionados, almacenamiento distribuido y comunicación entre servicios a través de eventos.
+      <br><br>
+      El paradigma de desarrollo en la nube también impulsa el uso de tecnologías sin servidor (serverless), donde no gestionamos la infraestructura directamente, sino que pagamos solo por el tiempo de ejecución de funciones específicas.
+    </p>
+  </section>
+
+  <section class="text-center mt-5">
+    <button class="btn btn-secondary" data-bs-toggle="modal" data-bs-target="#nubeModal">
+      ¿Sabías esto?
+    </button>
+  </section>
+
+  <div class="modal fade" id="nubeModal" tabindex="-1" aria-labelledby="nubeModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="nubeModalLabel">Dato Curioso</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Cerrar"></button>
+        </div>
+        <div class="modal-body">
+          Netflix, Spotify y Twitter son ejemplos de empresas que usan contenedores y despliegan su infraestructura completamente en la nube, gracias a su flexibilidad y escalabilidad.
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-outline-secondary" data-bs-dismiss="modal">Cerrar</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</main>
+
+<footer class="bg-dark text-white text-center p-3 mt-5">
+  &copy; Jorge Cabrera Dueñas.
+</footer>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

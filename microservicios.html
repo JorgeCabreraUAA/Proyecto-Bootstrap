@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Microservicios</title>
+  <link rel="stylesheet" href="estilos.css"/>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"/>
+</head>
+<body>
+
+
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+  <div class="container-fluid">
+    <a class="navbar-brand" href="index.html">Web Informativa</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#menu">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="menu">
+      <ul class="navbar-nav ms-auto">
+        <li class="nav-item"><a class="nav-link" href="webapis.html">Web APIs</a></li>
+        <li class="nav-item"><a class="nav-link active" href="microservicios.html">Microservicios</a></li>
+        <li class="nav-item"><a class="nav-link" href="webapi-desarrollo.html">Desarrollo de API</a></li>
+        <li class="nav-item"><a class="nav-link" href="contenedores-nube.html">Contenedores y Nube</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+
+<header class="bg-success text-white text-center p-5">
+  <h1>Arquitectura de Microservicios</h1>
+  <p>Diseñando sistemas escalables, resilientes y flexibles</p>
+</header>
+
+
+<main class="container my-5">
+  <section>
+    <h2>¿Qué son los Microservicios?</h2>
+    <p>
+      Los microservicios son un estilo arquitectónico que estructura una aplicación como un conjunto de servicios pequeños, independientes y desplegables de manera individual. Cada servicio está enfocado en una única funcionalidad de negocio y se comunica con los demás mediante protocolos ligeros como HTTP o mensajería basada en eventos (por ejemplo, Kafka o RabbitMQ).
+      <br><br>
+      A diferencia de las arquitecturas monolíticas, donde todas las funcionalidades están integradas en una única aplicación, los microservicios permiten desarrollar, escalar y mantener cada componente por separado. Esto mejora la agilidad del desarrollo, facilita la implementación de nuevas funcionalidades y reduce el riesgo de fallos globales.
+    </p>
+    <img src="img/ARQUITECTURA MICRO.png" class="img-fluid rounded d-block mx-auto my-4" alt="Arquitectura de Microservicios" />
+  </section>
+
+  <section class="mt-5">
+    <h2>Ventajas de los Microservicios</h2>
+    <div class="row">
+      <div class="col-md-6">
+        <ul>
+          <li><strong>Escalabilidad:</strong> cada servicio se puede escalar de forma independiente según su demanda.</li>
+          <li><strong>Despliegue independiente:</strong> los cambios en un microservicio no afectan a los demás.</li>
+          <li><strong>Fácil mantenimiento:</strong> el código está dividido en unidades pequeñas y manejables.</li>
+          <li><strong>Innovación tecnológica:</strong> cada servicio puede usar un lenguaje o base de datos diferente.</li>
+          <li><strong>Mejor tolerancia a fallos:</strong> si un servicio falla, el sistema completo puede seguir funcionando.</li>
+        </ul>
+      </div>
+      <div class="col-md-6">
+        <div class="card shadow-sm">
+          <div class="card-body">
+            <h5 class="card-title">Ejemplo práctico</h5>
+            <p class="card-text">Un sistema de comercio electrónico puede dividirse en microservicios como: gestión de productos, usuarios, pedidos, pagos y notificaciones. Si el servicio de notificaciones falla, los demás siguen operando.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="mt-5">
+    <h2>Desafíos de los Microservicios</h2>
+    <p>
+      Aunque tienen muchas ventajas, los microservicios también presentan ciertos desafíos. La complejidad aumenta al distribuir la lógica en múltiples servicios, lo que complica el monitoreo, el control de versiones, y la gestión de datos distribuidos. Se requiere una infraestructura robusta y herramientas especializadas para garantizar la comunicación eficiente y segura entre servicios.
+      <br><br>
+      Otro reto es el diseño adecuado de cada servicio: si se fragmenta demasiado, se corre el riesgo de tener una arquitectura frágil; si se agrupan demasiadas funciones, se pierde el beneficio de modularidad.
+    </p>
+  </section>
+
+  <section class="mt-5">
+    <h2>Buenas Prácticas</h2>
+    <ol>
+      <li>Diseñar cada microservicio con una única responsabilidad clara.</li>
+      <li>Usar APIs bien definidas para la comunicación entre servicios.</li>
+      <li>Implementar mecanismos de monitoreo y logging desde el inicio.</li>
+      <li>Automatizar pruebas e integración continua.</li>
+      <li>Manejar fallos con patrones como circuit breakers o retries.</li>
+    </ol>
+  </section>
+
+
+  <div class="text-center mt-5">
+    <button class="btn btn-outline-success" data-bs-toggle="modal" data-bs-target="#extraModal">
+      ¿Quieres saber más?
+    </button>
+  </div>
+
+</main>
+
+<!-- Modal -->
+<div class="modal fade" id="extraModal" tabindex="-1" aria-labelledby="extraModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="extraModalLabel">Información adicional</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Cerrar"></button>
+      </div>
+      <div class="modal-body">
+        En arquitecturas complejas, como las de empresas con millones de usuarios, los microservicios permiten mantener una operación fluida, mejorando el tiempo de respuesta y facilitando la innovación tecnológica.
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<footer class="bg-dark text-white text-center p-3 mt-5">
+  &copy; Jorge Cabrera Dueñas.
+</footer>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
